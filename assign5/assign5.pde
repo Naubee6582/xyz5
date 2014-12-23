@@ -311,7 +311,8 @@ void specialBar(){
       }
     }
 }
-    
+
+//Bonus PowerUp    
 void checkPowerDrop(int pointS){
   if (gameScore >= pointS)
   {
