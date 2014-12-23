@@ -17,7 +17,7 @@ final int GAME_PLAYING = 2;
 final int GAME_WIN     = 3;
 final int GAME_LOSE    = 4;
 int status;
-Board bar = new Board();
+Bar bar = new Bar();
 Ball ball2 = new Ball(); 
 Brick[] box = new Brick[total];
 PowerUp power = new PowerUp(int(random(15,585)), -10);
@@ -414,6 +414,29 @@ void statusCtrl(){
       status= GAME_PLAY;
     break;
     }
+  }
+}
+
+class PowerUp {
+
+  int pX;
+  int pY;
+  int pSpeed=2;
+  int pSize = 10;
+  boolean show = false;
+
+  PowerUp(int x, int y) {
+    pX = x;
+    pY = y;
+  }
+
+  void display() {
+    fill(random(256), random(256), random(256));
+    ellipse(pX, pY, pSize, pSize);
+  }
+
+  void move() {
+    pY+=pSpeed;
   }
 }
 

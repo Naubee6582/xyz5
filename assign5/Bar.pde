@@ -1,4 +1,4 @@
-class Board{
+class Bar{
   float x; 
   float y; 
   float w; 
@@ -7,7 +7,7 @@ class Board{
   float g; 
   float b;
 
-  Board(){
+  Bar(){
     x = width/2;
     y = 590;
     w = 100;
